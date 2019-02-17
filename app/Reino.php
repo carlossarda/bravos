@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reino extends Model
 {
-    //
+    protected $table = 'reinos';
 }

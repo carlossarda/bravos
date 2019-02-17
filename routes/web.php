@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/religiao', 'ReligiaoController@listaReligiao');
+
+Route::get('/personagens', 'PersonagemController@listaPersonagens');
