@@ -8,4 +8,7 @@ class Profissao extends Model
 {
     protected $table = 'profissoes';
 
+    protected function personagens(){
+        $this->hasMany('Personagem');
+    }
 }

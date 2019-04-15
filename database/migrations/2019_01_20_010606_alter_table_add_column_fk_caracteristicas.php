@@ -9,7 +9,7 @@ class AlterTableAddColumnFkCaracteristicas extends Migration
     public function up()
     {
         Schema::table('caracteristicas', function (Blueprint $table) {
-            $table->unsignedInteger('personagem_id');
+            $table->unsignedInteger('personagem_id')->unique();
             $table->foreign('personagem_id')->references('personagem_id')->on('personagens')->onDelete('cascade');
         });
     }

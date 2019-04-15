@@ -9,11 +9,12 @@ class PersonagemController extends Controller
 {
     public function listaPersonagens(){
         $personagens = Personagem::all();
-        return json_encode($personagens);
+        return response()->json($personagens);
     }
 
-    public function listaPersonagem($id_personagem){
-        $personagem = Personagem::find($id_personagem);
-        return \GuzzleHttp\json_encode($personagem);
+    public function listaPersonagem($id){
+        $personagem = Personagem::where('personagem_id',$id)->get();
+
+        return response()->json($personagem);
     }
 }
