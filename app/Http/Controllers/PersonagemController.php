@@ -9,12 +9,12 @@ class PersonagemController extends Controller
 {
     public function listaPersonagens(){
         $personagens = Personagem::all();
-        return response()->json($personagens);
+        return view()->json($personagens);
     }
 
     public function listaPersonagem($id){
         $personagem = Personagem::where('personagem_id',$id)->get();
 
-        return response()->json($personagem);
+        return view()->json($personagem);
     }
 }
